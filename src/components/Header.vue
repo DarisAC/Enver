@@ -22,10 +22,13 @@
 </template>
 
 <script>
+import MainContainer from '@/components/MainContainer.vue';
+
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'Home',
+  components: {
+    MainContainer
   },
   data() {
     return {

@@ -1,6 +1,8 @@
 $backGround: #19191B;
 $buttonColor: #5454D4;
+
 body {
+ 
     background-color: $backGround;
     font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,5 +14,7 @@ body {
   }
   .container{
     max-width: 768px;
+    
+    padding: 0;
   }
 }
