@@ -1,0 +1,35 @@
+.footer__contant{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        .logo_text{
+        font-size: 19px; 
+        font-weight: bold;
+        margin: auto;
+      
+       }
+    .logo_icon{
+        margin-right: 5px;
+        max-height: 27px;
+        max-width: 27px;
+    }
+    }
+    
+    .footer-nav{
+        max-width: 288px;
+        width: 100%;
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-copyright{
+        font-size: 11px;
+        margin:  auto 0;
+    }
+}

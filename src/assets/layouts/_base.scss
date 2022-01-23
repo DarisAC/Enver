@@ -1,0 +1,16 @@
+$backGround: #19191B;
+$buttonColor: #5454D4;
+body {
+    background-color: $backGround;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:white;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  .container{
+    max-width: 768px;
+  }
+}
