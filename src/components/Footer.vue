@@ -8,7 +8,7 @@
                 </div>
                 <div class="footer-nav">
                     <div class="nav_item" v-for="(menu, index) in footerNavList" :key="index">
-                        <router-link :to="menu.path" class="nav_itemsss">
+                        <router-link :to="menu.path">
                         {{ menu.name }}
                         </router-link>
                     </div>

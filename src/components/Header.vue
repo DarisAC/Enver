@@ -34,9 +34,9 @@ export default {
     return {
       headerNavList: [
         { name: 'Home', path: '/'},
-        { name: 'Services', path: '/Services'},
-        { name: 'Our project', path: '/Our project'},
-        { name: 'About us', path: '/About us'}
+        { name: 'Services', path: '/services'},
+        { name: 'Our project', path: '/our_project'},
+        { name: 'About us', path: '/about_us'}
       ]
     }
   }
