@@ -36,8 +36,33 @@
           </p>
         </div>
         <div class="why-enver__video">
-          <img src="../assets/image/video.png" alt="">
+          <img src="../assets/image/video.png" alt="" class="video">
           <img src="../assets/image/playVideo.png" alt="" class="video-button">
+        </div>
+      </div>
+    </MainContainer>
+  </section>
+  <section class="services">
+    <MainContainer>
+      <div class="services__presentation">
+        <h1 class="services_title">
+          The Service We Provide For Youas
+        </h1>
+        <div class="services_play-img">
+          <img src="../assets/image/play.png" alt="">
+        </div>
+        <div class="services_add-img">
+          <img src="../assets/image/add.png" alt="">
+        </div>
+        <div class="services_list">
+          <div class="services_item" v-for="(list,index) in servicesList" :key="index">
+             <img :src="require(`@/assets/image/${list.icon}`)"  />
+             <h2>{{ list.title }}</h2>
+             <p class="services_item-text">{{ list.text }}</p>
+          </div>
+          <div class="services_add-img-2">
+          <img src="../assets/image/add.png" alt="">
+        </div>
         </div>
       </div>
     </MainContainer>
@@ -63,8 +88,15 @@ export default {
         { image: "circles.png", class: "img-circles" },
         { image: "play.png", class: "img-play" },
         { image: "add.png", class: "img-add" }
-      
-    ]
+    ],
+      servicesList: [
+        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
+        { icon: "uiDesigner.png", title: "UI/UX Designer", text: "We provide UI/UX Design services, and of course with the best quality" },
+        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
+        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
+        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
+        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" } 
+      ]
     
   }
   
@@ -89,12 +121,70 @@ export default {
   .why-enver__video{
     margin-top: 30px;
     position: relative;
+    .video{
+      width: 100%;
+    }
     .video-button{
       position: absolute;
       top: 50%;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%)
+    }
+  }
+}
+
+.services{
+  
+  margin-top: 100px;
+  .services__presentation{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .services_title{
+      text-align: center;
+      max-width: 460px;
+      margin-bottom: 65px;
+    }
+    .services_play-img{
+      position: absolute;
+      top: 0;
+      left: 30px;
+    }
+    .services_add-img{
+      position: absolute;
+      top:55px;
+      right: 0;
+      transform: rotate(-30deg);
+    }
+    .services_add-img-2{
+      position: absolute;
+      bottom:30px;
+      left: 0;
+      transform: rotate(30deg);
+    }
+    .services_list{
+      display: flex;
+      flex-wrap: wrap;
+      .services_item{
+        margin-bottom: 80px;
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h2{
+        font-size: 19px;
+        margin: 15px 0;
+      }
+      .services_item-text{
+        font-size: 13px;
+        max-width: 190px;
+        text-align: center;
+      }
     }
   }
 }
