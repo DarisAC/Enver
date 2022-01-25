@@ -121,10 +121,10 @@ export default {
       servicesList: [
         { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
         { icon: "uiDesigner.png", title: "UI/UX Designer", text: "We provide UI/UX Design services, and of course with the best quality" },
-        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
-        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
-        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
-        { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" } 
+        { icon: "graphikDesigner.png", title: "Graphik Designer", text: "We provide Graphic Design services, with the best designers" },
+        { icon: "motionGraphik.png", title: "Motion Graphik", text: "Create a platform with the best and coolest quality from us" },
+        { icon: "photography.png", title: "Photography", text: "We provide Photography services, and of course with the best quality" },
+        { icon: "videography.png", title: "Videography", text: "Create a platform with the best and coolest quality from us" } 
       ],
       portfolioList: [
         {image: "portfolio-image1.png", class:"portfolio_image"},
