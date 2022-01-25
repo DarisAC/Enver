@@ -14,12 +14,6 @@
                <img :src="require(`@/assets/image/${imageList.image}`)" :class="imageList.class" />
 
             </div>
-            <!-- <img src="../assets/image/z.png" alt="" class="img-z">
-            <img src="../assets/image/our-services_back.png" alt="" class="img-our-services_back">
-            <img src="../assets/image/our-services_main.png" alt="" class="img-our-services_main">
-            <img src="../assets/image/circles.png" alt="" class="img-circles">
-            <img src="../assets/image/play.png" alt="" class="img-play">
-            <img src="../assets/image/add.png" alt="" class="img-add"> -->
           </div>   
         </div>
     </MainContainer>
@@ -62,7 +56,28 @@
           </div>
           <div class="services_add-img-2">
           <img src="../assets/image/add.png" alt="">
+          </div>
         </div>
+      </div>
+    </MainContainer>
+  </section>
+  <section class="portfolio">
+    <MainContainer>
+      <div class="portfolio__presentation">
+        <h1>Our Awesome Portofolio</h1>
+        <div class="portfolio_circles-img">
+          <img src="../assets/image/circles.png" alt="">
+        </div>
+        <div class="portfolio_list">
+          <div class="portfolio_item" v-for="(list,index) in portfolioList" :key="index">
+             <img :src="require(`@/assets/image/${list.image}`)" :class="list.class" />
+          </div>
+        </div>
+        <div class="portfolio_slider-img">
+          <img src="../assets/image/slider.png" alt="">
+        </div>
+         <div class="portfolio_z-img">
+          <img src="../assets/image/z.png" alt="">
         </div>
       </div>
     </MainContainer>
@@ -96,8 +111,13 @@ export default {
         { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
         { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" },
         { icon: "development.png", title: "Devolopment", text: "Create a platform with the best and coolest quality from us" } 
+      ],
+      portfolioList: [
+        {image: "portfolio-image1.png", class:"portfolio_image"},
+        {image: "portfolio-image1.png", class:"portfolio_image"},
+        {image: "portfolio-image1.png", class:"portfolio_image"}
       ]
-    
+
   }
   
 }}
@@ -188,4 +208,49 @@ export default {
     }
   }
 }
+
+.portfolio{
+  &__presentation{
+    position: relative;
+    
+    .portfolio_circles-img{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+    .portfolio_slider-img{
+      position: absolute;
+      margin-top: 30px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    }
+    .portfolio_z-img{
+      position: absolute;
+      left: 0;
+      bottom: -35px;
+    
+    }
+    .portfolio_list{
+      display: flex;
+      justify-content: space-between;
+    .portfolio_image{
+      border: 15px solid #1E1E20;
+      border-radius: 8px;
+      max-width: 245px;
+    }
+    .portfolio_item:nth-child(1){
+      max-width: 245px;
+      padding-top:  5px;
+    }
+    .portfolio_item:nth-child(2){
+      max-width: 245px;
+      padding-top:  35px;
+    }
+    .portfolio_item:nth-child(3){
+      max-width: 245px;
+      padding-top:  65px;
+    }
+  }}}
+
 </style>
