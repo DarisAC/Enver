@@ -5,7 +5,7 @@
           <div class="our-services__content">
             <h1>Build Your Awesome Platform</h1>
             <p>Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.</p>
-            <button class="button">Our revices
+            <button class="button">Our services
                <img src="../assets/image/arrow.png" alt="">
             </button>
           </div>
@@ -78,6 +78,20 @@
         </div>
          <div class="portfolio_z-img">
           <img src="../assets/image/z.png" alt="">
+        </div>
+      </div>
+    </MainContainer>
+  </section>
+  <section class="contact-us">
+    <MainContainer>
+      <div class="contact-us__presentation">
+        <h1 class="contact-us_title">Contact us for the service you want to use</h1>
+        <div class="contact-us_add-img">
+          <img src="../assets/image/add.png" alt="">
+        </div>
+        <button class="button"> Contact us</button>
+        <div class="contact-us_circles-img">
+          <img src="../assets/image/circles.png" alt="">
         </div>
       </div>
     </MainContainer>
@@ -252,5 +266,30 @@ export default {
       padding-top:  65px;
     }
   }}}
-
+.contact-us{
+  background: #1E1E20;
+  margin-top: 50px;
+ 
+  &__presentation{
+     height: 335px;
+    position: relative;
+    .contact-us_title{
+      max-width: 500px;
+    }
+    .contact-us_add-img{
+      position: absolute;
+      top: 45px;
+      right: 0;
+    }
+    .contact-us_circles-img{
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+    }
+    .button{
+      float: right;
+      margin-top: 60px;
+    }
+  }
+}
 </style>
