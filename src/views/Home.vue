@@ -1,5 +1,6 @@
 <template>
-  <ModalWindow v-if="isModalWindowVisible"/>
+  <ModalWindow v-if="isModalWindowVisible"
+  @click="closeModalWindow"/>
   <section class="our-services">
     <MainContainer>
         <div class="our-services__presentation">
@@ -140,6 +141,9 @@ export default {
   
 },
 methods:{
+  closeModalWindow(){
+ this.isModalWindowVisible = false
+},
 showModalWindow(){
  this.isModalWindowVisible = true
 }}
