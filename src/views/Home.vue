@@ -1,4 +1,5 @@
 <template>
+  <ModalWindow v-if="isModalWindowVisible"/>
   <section class="our-services">
     <MainContainer>
         <div class="our-services__presentation">
@@ -31,7 +32,7 @@
         </div>
         <div class="why-enver__video">
           <img src="../assets/image/video.png" alt="" class="video">
-          <img src="../assets/image/playVideo.png" alt="" class="video-button">
+          <img src="../assets/image/playVideo.png" alt="" class="video-button" @click="showModalWindow">
         </div>
       </div>
     </MainContainer>
@@ -101,15 +102,18 @@
 <script>
 // @ is an alias to /src
 import MainContainer from '@/components/MainContainer.vue';
+import ModalWindow from '@/components/ModalWindow.vue';
 
 
 export default {
   name: 'Home',
   components: {
-    MainContainer
+    MainContainer,
+    ModalWindow
   },
   data(){
     return {
+      isModalWindowVisible: false,
       ourServicesImageList:[
         { image: "z.png" , class: "img-z" },
         { image:"our-services_back.png", class: "img-our-services_back" },
@@ -134,7 +138,12 @@ export default {
 
   }
   
+},
+methods:{
+showModalWindow(){
+ this.isModalWindowVisible = true
 }}
+}
 </script>
 
 <style lang="scss" scoped>
