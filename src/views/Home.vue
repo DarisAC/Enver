@@ -33,7 +33,7 @@
         </div>
         <div class="why-enver__video">
           <img src="../assets/image/video.png" alt="" class="video">
-          <img src="../assets/image/playVideo.png" alt="" class="video-button" @click="showModalWindow">
+          <img src="../assets/image/playVideo.png" alt="" class="video-button" @click="showModalWindow" @closeModal="closeModalWindow">
         </div>
       </div>
     </MainContainer>

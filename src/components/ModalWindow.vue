@@ -3,7 +3,7 @@
         <MainContainer>
             <div class="modal-window__presentation">
                 <div class="modal-window_contant">
-                    <div class="modal-window_close"><img src="../assets/image/close.png" alt="" class="modal-window_img" @click="closeModalWindow"></div>
+                    <div class="modal-window_close"><img src="../assets/image/close.png" alt="" class="modal-window_img" @click="closeModalWindow" ></div>
                     
                     <img src="../assets/image/video.png" alt="" class="modal-window_video"></div>
                 
@@ -29,7 +29,7 @@ export default {
     }},
     methods: {
    closeModalWindow() {
-     this.$emit('closeModalWindow')
+     this.$emit('closeModal')
    } 
   }
   }
